@@ -21,12 +21,17 @@ function ButtonWrapper(props) {
 export default {
 	title: 'Design System/Button',
 	component: Button,
+	parameters: { actions: { argTypesRegex: '^on.*' } },
 }
 
 export const AllButtons = (args) => (
 	<div>
-		<Button appearance="primary">Primary</Button>
-		<Button appearance="secondary">Secondary</Button>
+		<Button {...args} appearance="primary">
+			Primary
+		</Button>
+		<Button {...args} appearance="secondary">
+			Secondary
+		</Button>
 		<Button appearance="tertiary">Tertiary</Button>
 		<Button appearance="outline">Outline</Button>
 		<Button appearance="primaryOutline">Outline primary</Button>
@@ -80,9 +85,9 @@ AllButtons.storyName = 'all buttons'
 
 export const buttonWrapper = (args) => (
 	<div>
-		<ButtonWrapper>Original Button Wrapper</ButtonWrapper>
+		<ButtonWrapper {...args}>Original Button Wrapper</ButtonWrapper>
 		<br />
-		<Button ButtonWrapper={ButtonWrapper} appearance="primary">
+		<Button {...args} ButtonWrapper={ButtonWrapper} appearance="primary">
 			Primary
 		</Button>
 		<Button ButtonWrapper={ButtonWrapper} appearance="secondary">
