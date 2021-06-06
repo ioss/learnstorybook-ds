@@ -1,0 +1,29 @@
+{
+    "plugins": [
+        "prettier"
+    ],
+    "extends": [
+      "eslint:recommended",
+      "plugin:react/recommended",
+      "plugin:prettier/recommended"
+    ],
+    "parser": "@typescript-eslint/parser",
+    "rules": {
+      "prettier/prettier": "error",
+      "no-console": "off",
+      "react/prop-types": "off"
+    },
+    "parserOptions": {
+      "sourceType": "module",
+      "ecmaFeatures": {
+        "jsx": true,
+        "modules": true
+      }
+    },
+    "env": {
+      "node": true,
+      "es6": true,
+      "jest": true,
+      "browser": true
+    }
+  }
