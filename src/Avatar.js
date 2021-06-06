@@ -7,8 +7,8 @@ import { Icon } from './Icon'
 
 export const sizes = {
 	large: 48,
-	medium: 28,
-	small: 20,
+	medium: 32,
+	small: 24,
 	tiny: 16,
 }
 
